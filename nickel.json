@@ -1,0 +1,19 @@
+{
+  "UniqueName": "JyGein.March",
+  "Version": "{{ModVersion}}",
+  "Author": "JyGein",
+  "Description": "March, your assassain.",
+  "RequiredApiVersion": "1.5.7",
+  "EntryPointAssembly": "CC-March.dll",
+  "LoadPhase": "AfterDbInit",
+  "Dependencies": [
+    {
+      "UniqueName": "Shockah.Kokoro",
+      "Version": "1.12.1"
+    },
+    {
+      "UniqueName": "JyGein.Energy",
+      "Version": "0.1.0"
+    }
+  ]
+}
