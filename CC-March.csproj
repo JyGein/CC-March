@@ -22,7 +22,6 @@
 		</PackageReference>
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="Actions\" />
 	  <Folder Include="Artifacts\" />
 	  <Folder Include="assets\Animation\" />
 	  <Folder Include="assets\Artifact\" />

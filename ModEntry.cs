@@ -34,7 +34,6 @@ internal class ModEntry : SimpleMod
             .Concat(BaseUncommonCardTypes)
             .Concat(BaseRareCardTypes)
             .Concat(BaseSpecialCardTypes);
-
     private static readonly List<Type> BaseCommonArtifacts = [
     ];
     private static readonly List<Type> BaseBossArtifacts = [
@@ -42,10 +41,11 @@ internal class ModEntry : SimpleMod
     private static readonly IEnumerable<Type> BaseArtifactTypes =
         BaseCommonArtifacts
             .Concat(BaseBossArtifacts);
-
     private static readonly IEnumerable<Type> AllRegisterableTypes =
         BaseCardTypes
             .Concat(BaseArtifactTypes);
+
+    internal ISpriteEntry AggressiveMoveIcon;
 
     public ModEntry(IPluginPackage<IModManifest> package, IModHelper helper, ILogger logger) : base(package, helper, logger)
     {
@@ -63,6 +63,8 @@ internal class ModEntry : SimpleMod
         Localizations = new MissingPlaceholderLocalizationProvider<IReadOnlyList<string>>(
             new CurrentLocaleOrEnglishLocalizationProvider<IReadOnlyList<string>>(AnyLocalizations)
         );
+
+        AggressiveMoveIcon = helper.Content.Sprites.RegisterSprite(package.PackageRoot.GetRelativeFile("assets/Icons/aggressiveMove.png"));
 
         foreach (var type in AllRegisterableTypes)
             AccessTools.DeclaredMethod(type, nameof(IRegisterable.Register))?.Invoke(null, [package, helper]);

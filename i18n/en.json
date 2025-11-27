@@ -1,12 +1,17 @@
 ﻿{
-    "character": {
-    },
-    "status": {
-    },
-    "action": {
-    },
-    "card": {
-    },
-    "artifact": {
+  "character": {
+  },
+  "status": {
+  },
+  "action": {
+    "AggressiveMove": {
+      "name": "Aggressive Move",
+      "description": "Move <c=boldPink>{0}</c> spaces in the direction of the enemy.",
+      "inCombatDescription": "Move <c=boldPink>{0}</c> spaces in the direction of the enemy. ({1})"
     }
+  },
+  "card": {
+  },
+  "artifact": {
+  }
 }
