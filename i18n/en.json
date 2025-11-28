@@ -1,5 +1,9 @@
 ﻿{
   "character": {
+    "March": {
+      "name": "March",
+      "description": "<c=137bff>March</c>\nYour assassain. She has to potential to kill quickly but fails to keep it together."
+    }
   },
   "status": {
   },
@@ -8,10 +12,25 @@
       "name": "Aggressive Move",
       "description": "Move <c=boldPink>{0}</c> spaces in the direction of the enemy.",
       "inCombatDescription": "Move <c=boldPink>{0}</c> spaces in the direction of the enemy. ({1})"
+    },
+    "IncreaseNextDamage": {
+      "name": "Increase Next Attack's Damage'",
+      "description": "The next attack on this card will have it's damage increased by <c=boldPink>{0}</c>."
     }
   },
   "card": {
-  },
-  "artifact": {
+    "HotPursuit": {
+      "name": "Hot Pursuit"
+    },
+    "HeatUp": {
+      "name": "Heat Up"
+    },
+    "PlayFast": {
+      "name": "Play Fast"
+    },
+    "AndLoose": {
+      "name": "And Loose"
+    },
+    "artifact": {
+    }
   }
-}

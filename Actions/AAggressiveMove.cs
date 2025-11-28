@@ -9,7 +9,7 @@ namespace JyGein.March.Actions;
 
 internal class AAggressiveMove : AMove
 {
-    int dist;
+    public int dist;
 
     int GetMoveDirection(State s, Combat c)
     {
@@ -40,8 +40,15 @@ internal class AAggressiveMove : AMove
                 Icon = ModEntry.Instance.AggressiveMoveIcon.Sprite,
                 TitleColor = Colors.action,
                 Title = ModEntry.Instance.Localizations.Localize(["action", "AggressiveMove", "name"]),
-                Description = ModEntry.Instance.Localizations.Localize(["action", "AggressiveMove", "all", s.route is Combat ? "inCombatDescription" : "description"], new object?[] {dist, combatHint})
+                Description = ModEntry.Instance.Localizations.Localize(["action", "AggressiveMove", s.route is Combat ? "inCombatDescription" : "description"]),
+                vals = [dist, combatHint]
+                
             }
         ];
+    }
+
+    public override Icon? GetIcon(State s)
+    {
+        return new Icon(ModEntry.Instance.AggressiveMoveIcon.Sprite, dist, Colors.textMain);
     }
 }
